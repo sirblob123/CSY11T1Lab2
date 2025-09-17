@@ -14,12 +14,13 @@ public class Main {
 
     public static int add(int num1, int num2) {
         int sum = num1 + num2;
-        return sum;}
+        return sum;
+    }
     // 2. add
-        public static int add(int num1, int num2, int num3, int num4) {
-            int sum = num1 + num2 + num3 + num4;
-            return sum;
-        }
+    public static int add(int num1, int num2, int num3, int num4) {
+        int sum = add(add(num1, num2), add(num3, num4));
+        return sum;
+    }
     // 3. morningGreeting
     public static String morningGreeting(String name) {
         String mornGreet = "早上好, " + name + "!";
@@ -46,7 +47,7 @@ public class Main {
         return posRounded;
     }
     // 8. roundNegativeValueToNearestInteger
- public static int roundNegativeValueToNearestInteger(double negRound) {
+    public static int roundNegativeValueToNearestInteger(double negRound) {
         int negRounded = 0;
         if (negRound % 1 == -0.5) {
             negRounded = (int) Math.floor(negRound);
